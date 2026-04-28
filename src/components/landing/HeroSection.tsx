@@ -11,6 +11,9 @@ export function HeroSection({ onPlanStay }: { onPlanStay: () => void }) {
       setScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section className="relative h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-[#1a1815]">
       <div className="absolute inset-0 z-0">
