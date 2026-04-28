@@ -10,9 +10,10 @@ import { ExploreMode } from "./components/ExploreMode";
 import { SuggestionToast } from "./components/SuggestionToast";
 import { LandingPage } from "./components/landing/LandingPage";
 import { motion, AnimatePresence } from "motion/react";
+import { LoginPage } from "./components/auth/LoginPage";
 import { TimelineItem } from "./types";
 
-type AppState = "landing" | "onboarding" | "dashboard";
+type AppState = "landing" | "login" | "onboarding" | "dashboard";
 
 const initialItems: TimelineItem[] = [
   {
@@ -83,7 +84,21 @@ export default function App() {
   };
 
   if (appState === "landing") {
-    return <LandingPage onPlanStay={() => setAppState("onboarding")} />;
+    return (
+      <LandingPage 
+        onPlanStay={() => setAppState("login")} 
+        onLogin={() => setAppState("login")}
+      />
+    );
+  }
+
+  if (appState === "login") {
+    return (
+      <LoginPage 
+        onLogin={() => setAppState("dashboard")} 
+        onBack={() => setAppState("landing")}
+      />
+    );
   }
 
   if (appState === "onboarding") {

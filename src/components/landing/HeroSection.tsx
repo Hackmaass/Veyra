@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { Menu } from "lucide-react";
 import Spline from '@splinetool/react-spline';
 
-export function HeroSection({ onPlanStay }: { onPlanStay: () => void }) {
+export function HeroSection({ onPlanStay, onLogin }: { onPlanStay: () => void; onLogin: () => void }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -37,6 +37,9 @@ export function HeroSection({ onPlanStay }: { onPlanStay: () => void }) {
                 {link}
               </a>
             ))}
+            <button onClick={onLogin} className={`text-xs uppercase tracking-widest transition-opacity mr-4 ${scrolled ? "text-[#1a1815]/70 hover:text-[#1a1815]" : "text-white/70 hover:text-white"}`}>
+              Member Access
+            </button>
             <button onClick={onPlanStay} className={`border px-6 py-2 uppercase tracking-widest text-xs transition-all ${scrolled ? "border-[#8a7b63] text-[#8a7b63] hover:bg-[#8a7b63] hover:text-white" : "border-white text-white hover:bg-white hover:text-[#1a1815]"}`}>
               Plan Your Stay
             </button>

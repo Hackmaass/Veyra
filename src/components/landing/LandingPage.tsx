@@ -7,16 +7,17 @@ import { Footer } from "./Footer";
 
 interface LandingPageProps {
   onPlanStay: () => void;
+  onLogin: () => void;
 }
 
-export function LandingPage({ onPlanStay }: LandingPageProps) {
+export function LandingPage({ onPlanStay, onLogin }: LandingPageProps) {
   return (
     <div className="flex flex-col min-h-screen bg-[#fdfbf7] text-[#1a1815] font-sans selection:bg-[#8a7b63] selection:text-white overflow-x-hidden">
-      <HeroSection onPlanStay={onPlanStay} />
+      <HeroSection onPlanStay={onPlanStay} onLogin={onLogin} />
       <PhilosophySection />
       <ChaletShowcase />
       <AmenitiesSection />
-      <Footer />
+      <Footer onPlanStay={onPlanStay} onLogin={onLogin} />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Footer() {
+export function Footer({ onPlanStay, onLogin }: { onPlanStay?: () => void; onLogin?: () => void }) {
   return (
     <footer className="bg-[#2c2825] text-white pt-24 pb-12 px-6">
       <div className="container mx-auto max-w-6xl flex flex-col md:flex-row justify-between gap-16 mb-20">
@@ -38,9 +38,20 @@ export function Footer() {
             Discover the new standard of travel<br />
             <a href="#" className="text-white hover:text-[#8a7b63] transition-colors border-b border-transparent hover:border-[#8a7b63]">Join Veyra Exclusive</a>
           </p>
-          <button className="bg-[#8a7b63] text-white px-8 py-3 font-mono text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-[#1a1815] transition-colors">
-            Plan Your Journey
-          </button>
+          <div className="flex flex-col items-start md:items-end gap-4">
+            <button 
+              onClick={onLogin}
+              className="text-white/40 hover:text-white font-mono text-[10px] uppercase tracking-[0.2em] transition-colors"
+            >
+              Member Login
+            </button>
+            <button 
+              onClick={onPlanStay}
+              className="bg-[#8a7b63] text-white px-8 py-3 font-mono text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-[#1a1815] transition-colors"
+            >
+              Plan Your Journey
+            </button>
+          </div>
         </div>
       </div>
       
