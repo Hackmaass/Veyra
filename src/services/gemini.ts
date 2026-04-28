@@ -131,7 +131,7 @@ export async function sendMessageStream(history: ChatMessage[], newMessage: stri
   ];
 
   const responseStream = await ai.models.generateContentStream({
-    model: "gemini-1.5-flash",
+    model: "gemini-1.5-flash-latest",
     contents: contents as any,
     config: {
       systemInstruction: SYSTEM_INSTRUCTION,

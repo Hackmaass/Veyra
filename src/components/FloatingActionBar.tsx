@@ -18,7 +18,7 @@ export function FloatingActionBar({
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: "spring", damping: 25, stiffness: 200, delay: 0.5 }}
-      className="absolute bottom-6 left-1/2 z-40 hidden -translate-x-1/2 md:block"
+      className="absolute bottom-8 left-8 z-40 hidden md:block"
     >
       <div className="flex items-center gap-2 rounded-2xl border border-[#e3dcd1]/30 bg-[#fdfbf7]/80 p-2 shadow-[0_10px_40px_rgba(44,40,37,0.06)] backdrop-blur-2xl">
         <button
