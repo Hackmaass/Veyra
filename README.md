@@ -36,15 +36,52 @@ Whether you're exploring the mountains or planning a curated local experience, V
 
 ---
 
+## 🏗️ Architecture & Frameworks
+
+Veyra is built on a custom **Agentic Concierge Framework** that bridges high-end UI with autonomous AI logic.
+
+### System Architecture
+```mermaid
+graph TD
+    A[User Interface - React 19] --> B{App State Manager}
+    B -->|Landing| C[3D Spline Hero]
+    B -->|Onboarding| D[User Intent Capture]
+    B -->|Dashboard| E[AI Concierge System]
+    
+    E --> F[Gemini 1.5 Pro]
+    F -->|Tool Calling| G[Timeline Manager]
+    G -->|Update JSON| H[Interactive Itinerary]
+    H -->|Sync| I[Google Maps SDK]
+```
+
+### AI Logic Flow
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant G as Gemini SDK
+    participant T as Timeline Tool
+    participant M as Map Interface
+
+    U->>G: "I want to visit a hidden spa tomorrow"
+    G->>G: Analyze Context & History
+    G->>T: update_timeline(action: ADD, spot: "Spa Name")
+    T->>M: Update Markers & Polylines
+    T-->>G: Confirmation
+    G-->>U: "Certainly. I've added a serene spa to your afternoon."
+```
+
+---
+
 ## 🛠️ Tech Stack
 
 Veyra is built with a modern, modular architecture for maximum performance and scalability:
 
 - **Frontend**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (Standard Vanilla CSS variables for theming)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **3D Runtime**: [@splinetool/react-spline](https://spline.design/)
-- **AI/LLM**: [Google Gemini SDK](https://ai.google.dev/) (with Tool Calling)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **AI Agent**: [Google Gemini SDK](https://ai.google.dev/) with Function Calling
+- **Motion**: [Framer Motion](https://www.framer.com/motion/)
+- **Mapping**: [Google Maps SDK](https://developers.google.com/maps)
 - **Icons**: [Lucide React](https://lucide.dev/)
 
 ---
