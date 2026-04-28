@@ -129,17 +129,17 @@ export function ChatInterface({ tripContext, setInputText, timelineItems, setTim
                 )}
               >
                 <div className={cn(
-                  "mb-2 font-mono text-[10px] font-medium uppercase tracking-widest opacity-70",
-                  message.role === "user" ? "text-right text-[#2c2825]" : "text-left text-[#3d3833]"
+                  "mb-2 font-mono text-[10px] font-bold uppercase tracking-widest",
+                  message.role === "user" ? "text-right text-[#1a1815]" : "text-left text-[#1a1815]"
                 )}>
                   {message.role === "user" ? "Guest" : "Concierge"}
                 </div>
                 
                 <div className={cn(
-                  "relative rounded-3xl px-5 py-4 text-[15px] leading-relaxed shadow-sm",
+                  "relative rounded-3xl px-5 py-4 text-[15px] leading-relaxed shadow-md",
                   message.role === "user"
-                    ? "rounded-br-sm border border-[#e3dcd1]/35 bg-white text-[#2c2825] backdrop-blur-md"
-                    : "markdown-body rounded-bl-sm border border-[#e3dcd1]/28 bg-[#fcfaf6] text-[#3d3833]"
+                    ? "rounded-br-sm border border-[#e3dcd1]/60 bg-white text-[#1a1815] backdrop-blur-md"
+                    : "markdown-body rounded-bl-sm border border-[#e3dcd1]/60 bg-[#fcfaf6] text-[#1a1815]"
                 )}>
                   {message.role === "user" ? (
                     <p>{message.content}</p>
@@ -178,7 +178,7 @@ export function ChatInterface({ tripContext, setInputText, timelineItems, setTim
             <button
               key={chip}
               onClick={() => setInputText(chip)}
-              className="rounded-full border border-[#e3dcd1]/35 bg-white/75 px-4 py-2 font-mono text-[10px] uppercase tracking-wider text-[#5c554d] transition-all hover:-translate-y-0.5 hover:border-[#e3dcd1]/70 hover:bg-white hover:text-[#2c2825] backdrop-blur-md"
+              className="rounded-full border border-[#e3dcd1]/70 bg-white/75 px-4 py-2 font-mono text-[10px] uppercase tracking-wider text-[#3a3530] transition-all hover:-translate-y-0.5 hover:border-[#e3dcd1] hover:bg-white hover:text-[#1a1815] backdrop-blur-md"
             >
               {chip}
             </button>
@@ -186,7 +186,7 @@ export function ChatInterface({ tripContext, setInputText, timelineItems, setTim
         </motion.div>
       )}
 
-      <div className="z-10 border-t border-[#e3dcd1]/25 bg-[#fdfbf7]/70 p-6 backdrop-blur-3xl">
+      <div className="z-10 border-t border-[#e3dcd1]/60 bg-[#fdfbf7]/90 p-6 backdrop-blur-3xl">
         <form onSubmit={handleSubmit} className="relative flex items-center">
           <input
             type="text"
@@ -194,18 +194,18 @@ export function ChatInterface({ tripContext, setInputText, timelineItems, setTim
             onChange={(e) => setInput(e.target.value)}
             disabled={isLoading}
             placeholder="Ask for dining, wellness, transport, or pace changes..."
-            className="w-full rounded-full border border-[#e3dcd1]/35 bg-white px-6 py-4 pr-14 text-sm text-[#2c2825] outline-none transition-all placeholder:text-[#3d3833] focus:border-[#e3dcd1]/70 focus:ring-1 focus:ring-[#d8c7a9]/35"
+            className="w-full rounded-2xl border border-[#e3dcd1]/60 bg-white px-6 py-4 pr-14 text-sm text-[#1a1815] outline-none transition-all placeholder:text-[#3a3530]/60 focus:border-[#e3dcd1] focus:ring-1 focus:ring-[#8a7b63]/20"
           />
           <button
             type="submit"
             disabled={!input.trim() || isLoading}
-            className="group absolute right-2 top-1/2 -translate-y-1/2 rounded-full border border-[#e3dcd1]/45 bg-white p-2.5 text-[#3d3833] transition-all hover:bg-[#fcfaf6] disabled:cursor-not-allowed disabled:opacity-50"
+            className="group absolute right-2 top-1/2 -translate-y-1/2 rounded-full border border-[#e3dcd1]/70 bg-white p-2.5 text-[#1a1815] transition-all hover:bg-[#fcfaf6] disabled:cursor-not-allowed disabled:opacity-50"
           >
             <Send className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </button>
         </form>
         <div className="mt-3 text-center">
-          <p className="font-mono text-[9px] uppercase tracking-widest text-[#3d3833]/60">
+          <p className="font-mono text-[9px] uppercase tracking-widest text-[#1a1815]/70">
             Powered by Gemini • Concierge Intelligence
           </p>
         </div>
