@@ -1,20 +1,120 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+  <h1 align="center">Veyra</h1>
+  <p align="center">
+    <strong>The Ultimate AI-Powered Luxury Travel Concierge</strong>
+  </p>
+  <p align="center">
+    <i>Seamlessly blending artificial intelligence with high-end alpine luxury aesthetics.</i>
+  </p>
 </div>
 
-# Run and deploy your AI Studio app
+---
 
-This contains everything you need to run your app locally.
+## 🌟 Overview
 
-View your app in AI Studio: https://ai.studio/apps/a628e52d-3869-4d8c-9fe8-3b1ec59d9329
+Veyra is a sophisticated, AI-driven travel platform designed to provide a "Light Luxury" concierge experience. Inspired by the serene aesthetics of high-end alpine chalets like BelArosa, Veyra combines a stunning 3D immersive landing page with a powerful AI trip planning engine powered by Google Gemini.
 
-## Run Locally
+Whether you're exploring the mountains or planning a curated local experience, Veyra anticipates your needs, modifies your itinerary in real-time, and offers exclusive local insights—all through a seamless conversational interface.
 
-**Prerequisites:**  Node.js
+---
 
+## ✨ Key Features
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 🏔️ Immersive Luxury Landing Page
+- **3D Hero Section**: Features an interactive Spline scene for a modern, tactile first impression.
+- **Responsive Aesthetics**: A curated palette of obsidian, taupe, and gold designed for a premium, high-contrast experience.
+- **Modular Sections**: Dedicated blocks for Philosophy, Features (AI Itineraries, Real-time Access), and Benefits.
+
+### 🤖 AI Concierge Dashboard
+- **Gemini-Powered Intelligence**: Uses Google Gemini for context-aware, real-time itinerary generation and modification.
+- **Autonomous Tool Calling**: The AI can directly modify your JSON itinerary timeline via function declarations.
+- **Conversational Interface**: A sleek, minimal chat interface for natural language trip planning.
+
+### 🗺️ Interactive Exploration
+- **Luxury Map Styles**: Custom-themed Google Maps integration with curated markers for a cohesive look.
+- **Dynamic Timeline**: A drag-and-drop style itinerary that stays perfectly synced with the AI assistant.
+
+---
+
+## 🛠️ Tech Stack
+
+Veyra is built with a modern, modular architecture for maximum performance and scalability:
+
+- **Frontend**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (Standard Vanilla CSS variables for theming)
+- **3D Runtime**: [@splinetool/react-spline](https://spline.design/)
+- **AI/LLM**: [Google Gemini SDK](https://ai.google.dev/) (with Tool Calling)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+
+---
+
+## 📁 Project Structure
+
+The project follows a modular component-based architecture:
+
+```text
+src/
+├── components/
+│   ├── landing/          # Luxury Landing Page components (Hero, Philosophy, etc.)
+│   ├── ChatInterface.tsx # AI Chat logic and streaming
+│   ├── MapPanel.tsx      # Custom themed Google Maps integration
+│   ├── TimelinePanel.tsx # Itinerary management and display
+│   └── TopBar.tsx        # Dashboard navigation
+├── services/
+│   └── gemini.ts         # AI configuration and tool calling logic
+├── types.ts              # Global TypeScript definitions
+├── App.tsx               # Main routing and state management
+└── index.css             # Design system and global tokens
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v18+)
+- A Gemini API Key ([Get one here](https://aistudio.google.com/))
+- A Google Maps API Key
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Hackmaass/Veyra.git
+   cd Veyra
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables:**
+   Create a `.env` file in the root directory:
+   ```env
+   VITE_GEMINI_API_KEY=your_gemini_api_key
+   VITE_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+   ```
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## 🛣️ Roadmap
+
+- [ ] **Multi-party Sync**: Real-time collaborative trip planning for groups.
+- [ ] **Offline Maps**: Cached map data for alpine exploration without connectivity.
+- [ ] **Booking Integration**: Direct checkout for curated hotel and restaurant recommendations.
+- [ ] **Voice Concierge**: Native voice interaction for hands-free planning.
+
+---
+
+## ⚖️ License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
