@@ -11,7 +11,7 @@ interface LandingPageProps {
 
 export function LandingPage({ onPlanStay }: LandingPageProps) {
   return (
-    <div className="flex flex-col min-h-screen bg-[#fdfbf7] text-[#2c2825] font-sans selection:bg-[#b09e80] selection:text-white overflow-x-hidden">
+    <div className="flex flex-col min-h-screen bg-[#fdfbf7] text-[#1a1815] font-sans selection:bg-[#8a7b63] selection:text-white overflow-x-hidden">
       <HeroSection onPlanStay={onPlanStay} />
       <PhilosophySection />
       <ChaletShowcase />

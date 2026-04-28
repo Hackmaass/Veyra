@@ -23,8 +23,8 @@ export function ChaletShowcase() {
     <section id="features" className="py-24 bg-[#f8f6f0]">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl text-[#2c2825] mb-4">Discover the Features</h2>
-          <div className="h-px w-16 bg-[#b09e80] mx-auto"></div>
+          <h2 className="font-display text-4xl text-[#1a1815] mb-4">Discover the Features</h2>
+          <div className="h-px w-16 bg-[#8a7b63] mx-auto"></div>
         </div>
         
         <div className="flex flex-col gap-24">
@@ -38,11 +38,11 @@ export function ChaletShowcase() {
                 />
               </div>
               <div className="w-full md:w-2/5 flex flex-col items-center text-center px-6">
-                <h3 className="font-display text-3xl text-[#2c2825] mb-6">{feature.name}</h3>
-                <p className="text-[#5c554d] font-light leading-relaxed mb-8">
+                <h3 className="font-display text-3xl text-[#1a1815] mb-6">{feature.name}</h3>
+                <p className="text-[#3a3530] font-light leading-relaxed mb-8">
                   {feature.description}
                 </p>
-                <button className="text-[#b09e80] uppercase tracking-[0.2em] font-mono text-[11px] border border-[#b09e80] px-8 py-3 hover:bg-[#b09e80] hover:text-white transition-all">
+                <button className="text-[#8a7b63] uppercase tracking-[0.2em] font-mono text-[11px] border border-[#8a7b63] px-8 py-3 hover:bg-[#8a7b63] hover:text-white transition-all">
                   Explore Feature
                 </button>
               </div>

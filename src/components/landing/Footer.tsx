@@ -6,7 +6,7 @@ export function Footer() {
       <div className="container mx-auto max-w-6xl flex flex-col md:flex-row justify-between gap-16 mb-20">
         <div className="md:w-1/3">
           <h2 className="font-display text-3xl mb-8">Veyra</h2>
-          <p className="font-mono text-[11px] uppercase tracking-widest text-[#b09e80] mb-2">The ultimate AI travel companion</p>
+          <p className="font-mono text-[11px] uppercase tracking-widest text-[#8a7b63] mb-2">The ultimate AI travel companion</p>
           <address className="not-italic text-sm text-white/70 leading-loose mt-6">
             100 Innovation Drive<br />
             San Francisco, CA 94105<br />
@@ -36,9 +36,9 @@ export function Footer() {
         <div className="md:w-1/3 flex flex-col items-start md:items-end">
           <p className="text-sm text-white/70 mb-6 text-left md:text-right">
             Discover the new standard of travel<br />
-            <a href="#" className="text-white hover:text-[#b09e80] transition-colors border-b border-transparent hover:border-[#b09e80]">Join Veyra Exclusive</a>
+            <a href="#" className="text-white hover:text-[#8a7b63] transition-colors border-b border-transparent hover:border-[#8a7b63]">Join Veyra Exclusive</a>
           </p>
-          <button className="bg-[#b09e80] text-white px-8 py-3 font-mono text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-[#2c2825] transition-colors">
+          <button className="bg-[#8a7b63] text-white px-8 py-3 font-mono text-[11px] uppercase tracking-[0.2em] hover:bg-white hover:text-[#1a1815] transition-colors">
             Plan Your Journey
           </button>
         </div>

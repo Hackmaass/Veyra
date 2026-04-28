@@ -9,11 +9,11 @@
   --color-premium-bg: #fdfbf7;
   --color-premium-surface: rgba(255, 255, 255, 0.7);
   --color-premium-surface-hover: rgba(255, 255, 255, 0.9);
-  --color-premium-border: rgba(0, 0, 0, 0.08);
-  --color-premium-text: #2c2825;
-  --color-premium-text-muted: rgba(44, 40, 37, 0.6);
-  --color-neon-purple: #b09e80;
-  --color-neon-cyan: #8b8070;
+  --color-premium-border: rgba(0, 0, 0, 0.15);
+  --color-premium-text: #1a1815;
+  --color-premium-text-muted: rgba(26, 24, 21, 0.85);
+  --color-neon-purple: #8a7b63;
+  --color-neon-cyan: #6a6155;
   --color-neon-pink: #d1c7b8;
 }
 
