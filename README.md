@@ -23,10 +23,14 @@ Whether you're exploring the mountains or planning a curated local experience, V
 ### 🏔️ Immersive Luxury Landing Page
 - **3D Hero Section**: Features an interactive Spline scene for a modern, tactile first impression.
 - **Responsive Aesthetics**: A curated palette of obsidian, taupe, and gold designed for a premium, high-contrast experience.
-- **Modular Sections**: Dedicated blocks for Philosophy, Features (AI Itineraries, Real-time Access), and Benefits.
+- **Modular Sections**: Dedicated blocks for Philosophy, Features (AI Itineraries, Real-time Access), and 
+
+### 🔐 Luxury Sanctuary Access
+- **Firebase-Powered Auth**: Secure, private entry for members with persistent session management.
+- **Multi-Mode Authentication**: Elegant flows for Login, Registration, and Password Recovery.
 
 ### 🤖 AI Concierge Dashboard
-- **Gemini-Powered Intelligence**: Uses Google Gemini for context-aware, real-time itinerary generation and modification.
+- **Gemini 1.5 Flash Intelligence**: Optimized for speed and real-time streaming, providing context-aware itinerary generation.
 - **Autonomous Tool Calling**: The AI can directly modify your JSON itinerary timeline via function declarations.
 - **Conversational Interface**: A sleek, minimal chat interface for natural language trip planning.
 
@@ -45,10 +49,10 @@ Veyra is built on a custom **Agentic Concierge Framework** that bridges high-end
 graph TD
     A[User Interface - React 19] --> B{App State Manager}
     B -->|Landing| C[3D Spline Hero]
-    B -->|Onboarding| D[User Intent Capture]
+    B -->|Sanctuary| L[Firebase Auth]
     B -->|Dashboard| E[AI Concierge System]
     
-    E --> F[Gemini 1.5 Pro]
+    E --> F[Gemini 1.5 Flash]
     F -->|Tool Calling| G[Timeline Manager]
     G -->|Update JSON| H[Interactive Itinerary]
     H -->|Sync| I[Google Maps SDK]
@@ -78,9 +82,10 @@ Veyra is built with a modern, modular architecture for maximum performance and s
 
 - **Frontend**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Authentication**: [Firebase Auth](https://firebase.google.com/products/auth)
+- **AI Agent**: [Google Gemini SDK](https://ai.google.dev/) (Flash 1.5)
 - **3D Runtime**: [@splinetool/react-spline](https://spline.design/)
-- **AI Agent**: [Google Gemini SDK](https://ai.google.dev/) with Function Calling
-- **Motion**: [Framer Motion](https://www.framer.com/motion/)
+- **Motion**: [Motion/React](https://www.framer.com/motion/)
 - **Mapping**: [Google Maps SDK](https://developers.google.com/maps)
 - **Icons**: [Lucide React](https://lucide.dev/)
 
@@ -113,6 +118,7 @@ src/
 - Node.js (v18+)
 - A Gemini API Key ([Get one here](https://aistudio.google.com/))
 - A Google Maps API Key
+- A Firebase Project ([Setup here](https://console.firebase.google.com/))
 
 ### Installation
 
@@ -128,10 +134,13 @@ src/
    ```
 
 3. **Set up environment variables:**
-   Create a `.env` file in the root directory:
+   Create a `.env.local` file in the root directory:
    ```env
    VITE_GEMINI_API_KEY=your_gemini_api_key
    VITE_GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+   VITE_FIREBASE_API_KEY=your_firebase_key
+   VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+   VITE_FIREBASE_PROJECT_ID=your_project_id
    ```
 
 4. **Run the development server:**
@@ -143,6 +152,7 @@ src/
 
 ## 🛣️ Roadmap
 
+- [x] **Sanctuary Access**: Secure member login and registration.
 - [ ] **Multi-party Sync**: Real-time collaborative trip planning for groups.
 - [ ] **Offline Maps**: Cached map data for alpine exploration without connectivity.
 - [ ] **Booking Integration**: Direct checkout for curated hotel and restaurant recommendations.
