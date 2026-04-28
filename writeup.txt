@@ -1,0 +1,52 @@
+# VEYRA | PROJECT WRITEUP & SYSTEM OVERVIEW
+
+## 1. PROJECT VISION
+Veyra is a high-end, AI-powered travel concierge platform that blends the serene aesthetics of alpine luxury with autonomous agentic intelligence. Inspired by the BelArosa Chalet design language, it provides a "Light Luxury" digital experience for sophisticated travelers who require intelligent, real-time itinerary adaptation.
+
+## 2. CORE SYSTEM ARCHITECTURE
+The application follows a strictly modular, three-tier journey:
+
+### Tier 1: The First Impression (Landing Page)
+- Immersive 3D Hero Section powered by Spline.
+- Narrative-driven scrolling experience (Philosophy, Features, Benefits).
+- Premium typography and a high-contrast palette (Obsidian, Taupe, Gold).
+
+### Tier 2: The Sanctuary (Authentication Layer)
+- Powered by Firebase Auth.
+- Secure access portal for members.
+- Supports Login, Registration, and Password Recovery with premium motion transitions.
+
+### Tier 3: The Concierge Dashboard (Core Engine)
+- **AI Intelligence**: Integrated with Google Gemini 1.5 Flash for rapid, context-aware responses.
+- **Autonomous Tool Calling**: The AI acts as an agent, calling the `update_timeline` function to modify user data without manual intervention.
+- **Interactive Map**: Custom-themed Google Maps SDK with dynamic markers synced to the AI's logic.
+- **Live Timeline**: A real-time itinerary display that tracks user progress and adapts to chat-based changes.
+
+## 3. TECHNICAL STACK
+- **Frontend**: React 19, Vite, TypeScript.
+- **Styling**: Tailwind CSS, Motion/React (formerly Framer Motion).
+- **Authentication**: Firebase (Auth & Firestore).
+- **AI/ML**: Google Gemini SDK (Flash 1.5) with Function Calling.
+- **Mapping**: Google Maps JavaScript API.
+- **3D**: Spline Runtime.
+
+## 4. UNIQUE SYSTEM BEHAVIORS
+- **Agentic Logic**: The Concierge doesn't just "talk"; it executes. If a user says "I'm tired," the AI automatically calls a function to remove high-intensity activities and adds relaxation spots.
+- **Streaming Intelligence**: Real-time markdown streaming for a "thinking" concierge feel.
+- **Visual Accessibility**: High-contrast ratios and glassmorphic layers ensure readability across all lighting conditions.
+
+## 5. REPOSITORY STRUCTURE
+- `/src/components/landing`: Design-heavy marketing components.
+- `/src/components/auth`: Secure entry logic.
+- `/src/services/gemini.ts`: The central AI orchestrator and tool-definition file.
+- `/src/lib/firebase.ts`: Cloud infrastructure initialization.
+- `/src/App.tsx`: The primary state machine managing the "Sanctuary" and "Dashboard" flow.
+
+## 6. ENVIRONMENT CONFIGURATION
+The system relies on three primary API keys:
+- `VITE_GEMINI_API_KEY`: Orchestrates the AI concierge.
+- `VITE_GOOGLE_MAPS_API_KEY`: Powers the luxury map interface.
+- `VITE_FIREBASE_API_KEY`: Secures user data and access.
+
+## 7. PROJECT SUMMARY FOR LLM CONTEXT
+Veyra is an example of "Agentic UI"—where the interface is a living reflection of an AI's decision-making process. It prioritizes mood-based adaptation, seamless cloud security, and a high-fidelity visual experience that matches the quality of the travel it plans.
